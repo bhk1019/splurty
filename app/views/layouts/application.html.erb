@@ -11,14 +11,16 @@
   <body>
     <header class="row">
       <div class="col-3">
-        <div class="circle">
-          <br />
-          Steven
-          <br />
-          Universe
-          <br />
-          Quotes
-        </div>
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+            <br />
+            Steven
+            <br />
+            Universe
+            <br />
+            Quotes
+          </div>
+        <% end %>
       </div>
 
       <div class="col-4 slogan">
@@ -26,7 +28,7 @@
       </div>
 
       <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Contribute', new_quote_path %>
         <%= link_to 'About', '#' %>
       </div>
 
@@ -44,7 +46,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-6 footer-blurb">
             Created by B.K., meep-morp connoisseur.
