@@ -49,17 +49,16 @@
           </div>
           <%= simple_form_for Quote.new do |f| %>
             <div class="modal-body">
-              <h1>Enter Your Quote Details</h1>
-              <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "We are the Crystal Gems." %>
+              <%= f.input :saying, label: "What is the quote you want to add?", placeholder: "We are the Crystal Gems." %>
               <br />
-              <%= f.input :author, label: "Who said the saying?", placeholder: "Steven Universe" %>
+              <%= f.input :author, label: "Who is the author of the quote?", placeholder: "Steven Universe" %>
               <br />
               <%= f.submit 'Create', class: 'btn btn-danger' %>
             </div>
           <% end %>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            
           </div>
         </div>
       </div>
@@ -82,7 +81,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-6">
-            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+            <%= link_to "Give me another quote.", root_path, class: 'next-quote' %>
           </div>
           <div class="col-12 col-sm-6 footer-blurb">
             Created by B.K., meep-morp connoisseur.
